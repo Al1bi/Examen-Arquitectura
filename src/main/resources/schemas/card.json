@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Card",
+  "description": "A card from the user",
+  "type": "object",
+  "properties": {
+    "card_number": {
+      "type": "string",
+      "pattern": "^[0-9]{16}$",
+      "description": "Card number with 16 digits"
+    },
+    "cvv": {
+      "type": "string",
+      "pattern": "^[0-9]{3,4}$",
+      "description": "CVV with 3 or 4 digits"
+    },
+    "expiration_date": {
+      "type": "string",
+      "pattern": "^(0[1-9]|1[0-2])\/[0-9]{2}$",
+      "description": "Expiration date in format MM/YY"
+    }
+  },
+  "required": ["card_number", "cvv", "expiration_date"]
+}
