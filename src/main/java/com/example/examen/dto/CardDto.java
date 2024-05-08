@@ -1,22 +1,22 @@
 package com.example.examen.dto;
 
 public class CardDto {
-  private String card_number;
+  private String cardNumber;
   private String cvv;
-  private String expiration_date;
+  private String expirationDate;
 
   public CardDto(String card_number, String cvv, String expiration_date){
-    this.card_number = card_number;
+    this.cardNumber = card_number;
     this.cvv = cvv;
-    this.expiration_date = expiration_date;
+    this.expirationDate = expiration_date;
   }
 
   public String getCardNumber() {
-    return card_number;
+    return cardNumber;
   }
 
   public void setCardNumber(String card_number) {
-    this.card_number = card_number;
+    this.cardNumber = card_number;
   }
 
   public String getCvv() {
@@ -28,11 +28,11 @@ public class CardDto {
   }
 
   public String getExpirationDate() {
-    return expiration_date;
+    return expirationDate;
   }
 
   public void setExpirationDate(String expiration_date) {
-    this.expiration_date = expiration_date;
+    this.expirationDate = expiration_date;
   }
 
 }

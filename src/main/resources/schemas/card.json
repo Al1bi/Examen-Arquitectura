@@ -4,7 +4,7 @@
   "description": "A card from the user",
   "type": "object",
   "properties": {
-    "card_number": {
+    "cardNumber": {
       "type": "string",
       "pattern": "^[0-9]{16}$",
       "description": "Card number with 16 digits"
@@ -14,11 +14,11 @@
       "pattern": "^[0-9]{3,4}$",
       "description": "CVV with 3 or 4 digits"
     },
-    "expiration_date": {
+    "expirationDate": {
       "type": "string",
       "pattern": "^(0[1-9]|1[0-2])\/[0-9]{2}$",
       "description": "Expiration date in format MM/YY"
     }
   },
-  "required": ["card_number", "cvv", "expiration_date"]
+  "required": ["cardNumber", "cvv", "expirationDate"]
 }

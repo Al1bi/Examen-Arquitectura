@@ -2,6 +2,7 @@ package com.example.examen;
 
 import java.util.Set;
 
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -62,7 +63,7 @@ public class Controller implements IController {
     } catch (Exception e) {
       e.printStackTrace();
       ResponseLogin responseLogin = new ResponseLogin("tokensito", 0);
-      return ResponseEntity.ok(responseLogin);
+      return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(responseLogin);
     }
   }
 
@@ -92,7 +93,7 @@ public class Controller implements IController {
     } catch (Exception e) {
       e.printStackTrace();
       ResponseCard responseCard = new ResponseCard(1, "error");
-      return ResponseEntity.ok(responseCard);
+      return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(responseCard);
     }
   }
   
